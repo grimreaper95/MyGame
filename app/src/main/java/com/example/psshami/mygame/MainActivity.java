@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //finding widgets
         bsubmit = (Button)findViewById(R.id.bsubmit);
         bnext = (Button)findViewById(R.id.bnext);
         etans = (EditText)findViewById(R.id.etans);
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //clicking on next button for next image
         bnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     ivlogo.setImageResource(logo[cur_pos]);
-                    bsubmit.setVisibility(View.VISIBLE);
-                    bnext.setVisibility(View.INVISIBLE);
+                    bsubmit.setVisibility(View.VISIBLE);// alternatively changing visibility of submit and next buttons
+                    bnext.setVisibility(View.INVISIBLE);//
                 }
 
             }
